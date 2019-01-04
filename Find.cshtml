@@ -1,0 +1,75 @@
+﻿@model MVC_Model_DAL_Employee.Models.EmployeeModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Find</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div align="center">
+        <h4>EmployeeModel</h4>
+        <hr />
+        <dl class="dl-horizontal" style="width:50%;text-align:left;">
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeCity)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeCity)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeEmail)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeEmail)
+            </dd> 
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeGender)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeGender)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EmpoyeeImageAddress)
+            </dt>
+    
+            <dd>
+                <img height="200px" width="250px" src=@Model.EmpoyeeImageAddress />
+            </dd>
+        </dl>
+        @Html.ActionLink("Edit", "Edit", "Employees", new { id = Model.EmployeeID }, null)
+        @Html.ActionLink("Delete", "Delete", "Employees", new { id = Model.EmployeeID }, null)
+    </div>
+</body>
+</html>
